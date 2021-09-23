@@ -558,7 +558,8 @@ section{
        .detail-img{
            position: absolute;top:-100px;left:0px;transform: rotateZ(00deg);height: 35px;
            background: rgba(233, 191, 4, 1);display:inline-flex;width:80px;
-           justify-content: center;align-items: center;font-weight: 500;font-family: samsung-bold;
+           justify-content: center;align-items: center;font-weight: 500;
+           font-family: samsung-bold;
            font-size:15px;border-radius:0px ;transition: 0.5s;
        }
        .dish-container:hover .detail-img{
@@ -979,11 +980,10 @@ section{
                outline:none !important
            }
            .price-cost{
-               position: absolute;color:rgba(200,200,200,0.8);color: rgba(0,0,0,0.6);
-               z-index: 10;top:5px;right:5px;background: rgba(233, 191, 4, 1);z-index: 15;
-               width:70px;padding: 0.1em 0.2em;text-align: right;font-family: samsung-bold;
-               clip-path: polygon(0 0,100% 0,100% 50%,100% 100%,0% 100%,25% 50%);
-               right:8px;top:8px;
+               position: relative;color:rgba(200,200,200,0.8);color: rgba(0,0,0,0.6);
+               z-index: 10;top:-20px;right:-20px;background: rgba(233, 191, 4, 1);z-index: 15;
+               width:80px;padding: 0.1em 0.2em;text-align: right;font-family: samsung-bold;
+               clip-path: polygon(0 0,100% 0,100% 50%,100% 100%,0% 100%,25% 50%);display:inline-block;
            }
            .food-icon{
                transition: 0.5s;position: relative;overflow: hidden;
