@@ -818,7 +818,7 @@ section{
             position: relative;height: 25px;
             background: black;display:inline-flex !important;width:25px;
             justify-content: center;align-items: center;font-weight: 500;
-            font-size:10px;border-radius:50%;color: rgba(233, 191, 4, 1);  
+            font-size:15px;border-radius:50%;color: rgba(233, 191, 4, 1);  
         }
         .cartimg{
             height:200px;object-fit:contain;width: 90% !important;
@@ -979,11 +979,48 @@ section{
            .year:focus{
                outline:none !important
            }
+           .iframe{
+               width:100%;border: 2px solid rgb(80, 169, 241);
+               border-radius: 5px;
+           }
+           .location-iframe{
+               width:250px;position: fixed;bottom:0;right:0;background:rgb(255,255,255);
+               padding:1em ;border-radius: 5px;z-index: 100;transition: 0.4s;
+               overflow: hidden;overflow-y: scroll;
+           }
+           .location-iframe>h6{
+               font-family: samsung-bold;transition: 0.4s;
+           }
+           .location-iframe>div>a{
+               font-family: samsung-light;font-size: 11.5px;display:block;margin-bottom: 0.5em;
+               transition: 0.4s;
+           }
+           .location-iframe>div>a::before{
+               content:"";display:inline-block;width:4px;height:4px;background: black;
+               border-radius:50px;top:calc(50% -2px);margin-right:5px;
+               transition: 0.4s;
+           }
+           .location-iframe>div>h6{
+            font-family: samsung-bold;margin-top:1.5em;transition: 0.4s;
+           }
+   input{
+    -webkit-touch-callout:initial !important; /* iOS Safari */
+    -webkit-user-select:initial !important; /* Safari */
+    -khtml-buser-select:initial !important; /* Konqueror HTML */
+    -moz-user-select: initial !important; /* Old versions of Firefox */
+    -ms-user-select:initial !important; /* Internet Explorer/Edge */
+    user-select:initial !important; /* Non-prefixed version, curr*/ }
            .price-cost{
-               position: relative;color:rgba(200,200,200,0.8);color: rgba(0,0,0,0.6);
-               z-index: 10;top:-20px;right:-20px;background: rgba(233, 191, 4, 1);z-index: 15;
+               position: absolute;color:rgba(200,200,200,0.8);color: rgba(0,0,0,0.6);
+               z-index: 10;top:20px !important;right:20px !important;background: rgba(233, 191, 4, 1);z-index: 15;
                width:80px;padding: 0.1em 0.2em;text-align: right;font-family: samsung-bold;
                clip-path: polygon(0 0,100% 0,100% 50%,100% 100%,0% 100%,25% 50%);display:inline-block;
+           }
+           .locate-cancle{
+               position:absolute;top:10px;right:10px;width:20px;height:20px;font-size: 10px;
+               border-radius: 50px;box-shadow: 2px 1px 5px rgba(200,200,200,0.85);
+               background: white;display:inline-flex;justify-content: center;
+               align-items: center;
            }
            .food-icon{
                transition: 0.5s;position: relative;overflow: hidden;
@@ -1063,5 +1100,133 @@ section{
         .other-header{
             color:rgba(233, 191, 4, 0.678);margin-top:1.5em;
             background: rgba(30,30,30,1);padding:0.7em 0.3em;
-        font-family: samsung-bold !important;
+            font-family: samsung-bold !important;
         }
+        .image-chef{
+            height:150px;padding: 0.2em 0;border-radius: 10px;
+            box-shadow:inset 2px 2px 5px rgba(0,0,0,0.6), 0 7px 13px rgba(0,0,0, 1);background: rgba(30,30,30,1);
+        
+        }
+        .image-chef>img{
+            border-radius: 10px;width: 100%;height: 100%;
+            object-fit: cover !important;
+        }
+        .chefContain{
+            color:rgba(255, 250, 250, 0.85) !important;
+            padding: 1.5em 0em;margin: 0.8em 0.5em;border-radius: 10px;
+             box-shadow:inset 2px 2px 5px rgba(0,0,0,0.6), 0 7px 13px rgba(0,0,0, 1);background: rgba(30,30,30,1);
+
+        }
+        .floatheart{
+            float:right;margin-left: 0.5em;
+            padding: 0.5em;
+            background: rgba(233, 191, 4, 1);
+            border-radius: 50%;color:rgba(0,0,0, 1);
+            display:"flex" !important;justify-content: center;
+            align-items: center;
+        }
+        .chefContain>div:nth-of-type(2)>h5{
+             font-family: samsung-bold;
+        }
+        .chefContain>div:nth-of-type(2){
+            width:calc(100% - 120px)
+        }
+        .imgContain{
+            flex:none !important;padding:0.5em;
+            margin: 0em 1em;border-radius: 20px;
+            width:200px;height:auto;position: relative;
+            box-shadow:inset 2px 2px 7px rgba(0,0,0,0.6), 0 7px 13px rgba(0,0,0, 1);background: rgba(30,30,30,1);
+  
+        }
+        .imgContain>img{
+            border-radius: 20px;
+        }
+        .flexScroll{
+            display:flex;width:100%;height:auto;
+            overflow: scroll;padding: 1.5em 0;
+            scrollbar-width: none;-ms-overflow-style: none;
+        }
+        .flexScroll::-webkit-scrollbar{
+            display:none
+        }
+        .item-item{
+            color:rgba(0,0,0,0.4);font-family: samsung-bold;
+            margin-left: 1em;
+        }
+        .clicklink{
+            color:rgba(233, 191, 4, 0.678);text-transform: uppercase;
+            display: inline-block;width:2em;font-family: samsung-bold;margin: 0.5em 0;
+            border-left: 2px solid rgba(233, 191, 4, 0.578);font-size: 1.2em;
+            text-align: center;
+        }
+        .item-head{
+            color:rgba(0,0,0,0.6);text-transform: capitalize;
+        }
+        .rolls{
+             border-radius: 10px;
+        }
+        .item-item>li{
+            list-style-type: disc;margin: 1em 0.4em;
+        }
+        .picsContain{
+            border-radius: 10px;padding:0.7em ;
+            box-shadow:inset 2px 2px 5px rgba(0,0,0,0.6), 0 7px 13px rgba(0,0,0, 1);background: rgba(30,30,30,1);
+
+        }
+        .header-pics{
+            height: 400px;width:100%;border-radius: 10px;
+            object-fit: cover;padding-bottom: 0em;
+
+        }
+        .foodContain{
+            margin-top: 3em;
+        }
+        .player{
+            font-family: samsung-bold;color:rgba(0,0,0,0.4);
+        }
+        .player>span{
+            font-size: 1.7em !important;font-weight: 100;
+            display: inline-flex;
+        }
+        .food-property{
+            color:rgba(0,0,0,0.8);
+            margin:0 1em;background: white;
+            position: relative;top:-100px;
+            padding:1em;border-radius: 10px;
+            box-shadow:inset 2px 2px 5px rgba(116, 100, 100, 0.2), 0 7px 13px rgba(165, 144, 144, 0.2);background: rgba(240,240,240,1);
+
+               }
+               @media all and (min-width:756px){
+                .food-property{
+                    margin:0 2em;
+                       }
+               }
+               @media all and (min-width:992px){
+                .food-property{
+                    margin:0 3.5em;
+                       }
+               }
+               .food-property>p{
+                   font-size: 15px;font-family: helvetica;font-weight: 300;
+                   line-height: 1.7;padding: 2em 0 1em 1em;
+               }
+               .food-property>span{
+                   display:inline-block;
+                   color:rgba(0,0,0,01);font-family: samsung-light;
+                   font-size: 13px;
+               }
+        .containFlexscroll{
+           width:100%;padding: 1em 0;
+        }
+        .abt-name{
+            position: absolute;bottom: 0;
+            right: 0;background: rgba(233, 191, 4, 0.678);
+            font-size: 12px;font-family: samsung-bold;
+            padding: 0.6em;border-radius: 7px;
+        }
+        .chefContain>div:nth-of-type(2)>div{
+            font-family: samsung-light;font-size: 13px;
+       }
+       .no-mar{
+           margin:0;padding: 0;
+       }
